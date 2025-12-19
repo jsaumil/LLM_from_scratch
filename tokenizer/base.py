@@ -28,7 +28,7 @@ def replace_control_characters(s:str) -> str:
     return "".join(chars)
 
 def render_token(t: bytes) -> str:
-    s = t.decode('utf-8',error='replace')
+    s = t.decode('utf-8',errors='replace')
     s = replace_control_characters(s)
     return s
 
